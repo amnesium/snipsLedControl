@@ -53,6 +53,7 @@ def main():
 						choices=[
 							"respeaker2",
 							"respeaker4",
+							"respeakerMicArrayV1",
 							"respeakerMicArrayV2",
 							"respeakerCoreV2",
 							"respeaker6MicArray",

@@ -15,7 +15,7 @@ fi
 USER=$(logname)
 
 echo "What device do you wish to control with SLC?"
-select device in "respeaker2" "respeaker4" "respeakerMicArrayV2" "neoPixelsSK6812RGBW" "neoPixelsWS2812RGB" "matrixvoice" "matrixcreator" "respeakerCoreV2" "respeaker6MicArray" "respeaker7MicArray" "googleAIY" "I'm using simple leds on GPIOs" "don't overwrite existing parameters" "cancel"; do
+select device in "respeaker2" "respeaker4" "respeakerMicArrayV1" "respeakerMicArrayV2" "neoPixelsSK6812RGBW" "neoPixelsWS2812RGB" "matrixvoice" "matrixcreator" "respeakerCoreV2" "respeaker6MicArray" "respeaker7MicArray" "googleAIY" "I'm using simple leds on GPIOs" "don't overwrite existing parameters" "cancel"; do
     case $device in
         cancel) exit;;
         *) break;;
@@ -112,6 +112,11 @@ select answer in "yes" "no" "cancel"; do
                 neoPixelsWS2812RGB)
                     chmod +x ./installers/neopixels.sh
                     ./installers/neopixels.sh
+                    break
+                    ;;
+                respeakerMicArrayV1)
+                    chmod +x ./installers/respeakerMicArrayV1.sh
+                    ./installers/respeakerMicArrayV1.sh
                     break
                     ;;
                 respeakerMicArrayV2)

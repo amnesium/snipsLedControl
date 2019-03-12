@@ -20,6 +20,18 @@
 		"doa": true,
 		"endFrame": 255
 	},
+	"respeakerMicArrayV1": {
+		"name": "ReSpeaker Mic array v1",
+		"numberOfLeds": 12,
+		"interface": "respeakerMicArrayV1",
+		"endFrame": 0,
+		"extras": {
+			"volume": {
+				"min": 0,
+				"max": 12
+			}
+		}
+	},
 	"respeakerMicArrayV2": {
 		"name": "ReSpeaker Mic array v2",
 		"numberOfLeds": 12,

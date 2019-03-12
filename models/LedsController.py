@@ -109,6 +109,10 @@ class LedsController:
 				from interfaces.neopixels import Neopixels
 				self._interface = Neopixels(numLeds=self._hardware['numberOfLeds'], stripType=self._hardware['type'], pin=self._hardware['gpioPin'])
 
+			elif self._hardware['interface'] == Interfaces.RESPEAKER_MIC_ARRAY_V1:
+				from interfaces.respeakerMicArrayV1 import RespeakerMicArrayV1
+				self._interface = RespeakerMicArrayV1(numLeds=self._hardware['numberOfLeds'])
+
 			elif self._hardware['interface'] == Interfaces.RESPEAKER_MIC_ARRAY_V2:
 				from interfaces.respeakerMicArrayV2 import RespeakerMicArrayV2
 				self._interface = RespeakerMicArrayV2(numLeds=self._hardware['numberOfLeds'], vid=self._hardware['vid'], pid=self._hardware['pid'])
